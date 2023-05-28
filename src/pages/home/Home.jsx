@@ -81,20 +81,6 @@ const MobileTitleText = styled.span`
   line-height: 100%;
 `;
 
-const MenuWrapper = styled.div`
-  margin-top: 140px;
-
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* align-items: flex-end; */
-  /* justify-content: end; */
-  /* margin-top: 120px; */
-  /* padding-bottom: 100px; */
-`;
-
 const MenuLink = styled(Link)`
   width: auto;
 
