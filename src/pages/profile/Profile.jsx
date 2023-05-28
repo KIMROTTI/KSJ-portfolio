@@ -40,7 +40,7 @@ const Container = styled.div`
 
 const TextBox = styled.div`
   width: auto;
-  max-width: 300px;
+  max-width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -114,7 +114,9 @@ const Profile = () => {
             <TextBox>
               <ProfileTitle>Education</ProfileTitle>
               <ProfileText>
-                京都精華大学マンガ学部アニメーション学科（2024年卒業予定）
+                京都精華大学マンガ学部アニメーション学科
+                <br />
+                （2024年卒業予定）
               </ProfileText>
               <ProfileTitle style={{ marginTop: "48px" }}>Email</ProfileTitle>
               <ProfileText>rlatjdwo0824@gmail.com</ProfileText>
@@ -161,7 +163,9 @@ const Profile = () => {
             <TextBox>
               <ProfileTitle>Education</ProfileTitle>
               <ProfileText>
-                京都精華大学マンガ学部アニメーション学科（2024年卒業予定）
+                京都精華大学マンガ学部アニメーション学科
+                <br />
+                （2024年卒業予定）
               </ProfileText>
               <ProfileTitle style={{ marginTop: "48px" }}>Email</ProfileTitle>
               <ProfileText>rlatjdwo0824@gmail.com</ProfileText>
