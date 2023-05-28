@@ -95,6 +95,7 @@ const MenuText = styled.span`
   color: #dedede;
   /* font-family: "Alumni Sans"; */
   /* font-family: "Helvetica"; */
+  font-family: "Pretendard";
   font-size: 1rem;
 `;
 const MobileBox = styled.div`
