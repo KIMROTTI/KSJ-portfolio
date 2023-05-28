@@ -5,6 +5,9 @@ import { styled } from "styled-components";
 // import home_poster from "assets/images/home/home_poster.webp";
 // import home_mobile from "assets/images/home/home_mobile.webp";
 import { Link } from "react-router-dom";
+import mobile_contact from "assets/icons/menu/social_contact.svg";
+import mobile_instargram from "assets/icons/menu/social_instargram.svg";
+import mobile_twitter from "assets/icons/menu/social_twitter.svg";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -51,6 +54,12 @@ const MobileWrapper = styled.div`
   padding-top: 34vh;
 `;
 
+const MobileTMenu = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: end;
+`;
+
 const MobileTitleBox = styled(Link)`
   width: auto;
 
@@ -87,16 +96,26 @@ const MenuWrapper = styled.div`
 `;
 
 const MenuLink = styled(Link)`
+  width: auto;
+
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+
   text-decoration: none;
 `;
 
 const MenuText = styled.span`
-  text-decoration: underline;
+  /* text-decoration: underline; */
+
+  height: auto;
+  line-height: 100%;
+
   color: #dedede;
-  /* font-family: "Alumni Sans"; */
-  font-family: "Helvetica";
+  font-family: "Alumni Sans";
+  /* font-family: "Helvetica"; */
   /* font-family: "Pretendard"; */
-  font-size: 1rem;
+  font-size: 1.4rem;
 `;
 const MobileBox = styled.div`
   width: 100%;
@@ -119,6 +138,31 @@ const MobileVideoWrapper = styled.div`
 const MobileVideo = styled.video`
   width: 100%;
   height: auto;
+`;
+
+const ToggleSocialWrapper = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  /* justify-content: space-between; */
+  margin-top: 4px;
+`;
+
+const ToggleSocialLink = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin: 0 4px;
+`;
+
+const ToggleSocialImg = styled.img`
+  width: 100%;
+  height: 100%;
 `;
 const Home = ({ setIshome }) => {
   useEffect(() => {
@@ -144,9 +188,14 @@ const Home = ({ setIshome }) => {
       </Pc>
       <Mobile>
         <MobileWrapper>
-          <MobileTitleBox>
-            <MobileTitleText>KIM SUNG JAE</MobileTitleText>
-          </MobileTitleBox>
+          <MobileTMenu>
+            <MobileTitleBox>
+              <MobileTitleText>KIM SUNG JAE</MobileTitleText>
+            </MobileTitleBox>
+            <MenuLink to="/profile">
+              <MenuText>PROFILE</MenuText>
+            </MenuLink>
+          </MobileTMenu>
           <MobileBox>
             <MobileVideoWrapper>
               <MobileVideo
@@ -160,11 +209,28 @@ const Home = ({ setIshome }) => {
                 loop
               />
             </MobileVideoWrapper>
-            <MenuWrapper>
+            <ToggleSocialWrapper>
+              <ToggleSocialLink
+                href="https://twitter.com/pinn_sj"
+                target="_blank"
+              >
+                <ToggleSocialImg src={mobile_twitter} />
+              </ToggleSocialLink>
+              <ToggleSocialLink
+                href="https://www.instagram.com/pinn_999/"
+                target="_blank"
+              >
+                <ToggleSocialImg src={mobile_instargram} />
+              </ToggleSocialLink>
+              <ToggleSocialLink href="mailto:rlatjdwo0824@gmail.com">
+                <ToggleSocialImg src={mobile_contact} />
+              </ToggleSocialLink>
+            </ToggleSocialWrapper>
+            {/* <MenuWrapper>
               <MenuLink to="/profile">
                 <MenuText>PROFILE</MenuText>
               </MenuLink>
-            </MenuWrapper>
+            </MenuWrapper> */}
           </MobileBox>
         </MobileWrapper>
       </Mobile>

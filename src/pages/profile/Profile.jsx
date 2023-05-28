@@ -16,6 +16,9 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media screen and (max-width: 1024px) {
+    margin-top: 84px;
+  }
 `;
 
 const Container = styled.div`
@@ -65,10 +68,14 @@ const TechImage = styled.img`
 const MainContentBox = styled.div`
   margin-top: 48px;
   width: 100%;
+  height: 100%;
   padding: 0 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and (max-width: 1024px) {
+    height: auto;
+  }
 `;
 // const MainVideo = styled.video`
 //   margin-top: 12px;
@@ -82,6 +89,10 @@ const Mainiframe = styled.iframe`
   margin-top: 8px;
   width: 100%;
   height: 100%;
+  max-width: 600px;
+  min-height: 80px;
+  /* width: 600px; */
+  /* min-height: 100px; */
   /* object-fit: cover; */
   position: relative;
   z-index: 0;
@@ -91,19 +102,51 @@ const Profile = () => {
     <div>
       <Pc>
         <Wrapper>
-          <Container>
-            <TextBox>
-              <ProfileTitle>Email</ProfileTitle>
-              <ProfileText>rlatjdwo0824@gmail.com</ProfileText>
+          <Wrapper>
+            <Container>
+              <TextBox>
+                <ProfileTitle>Education</ProfileTitle>
+                <ProfileText>
+                  京都精華大学マンガ学部アニメーション学科（2024年卒業予定）
+                </ProfileText>
+                <ProfileTitle style={{ marginTop: "48px" }}>Email</ProfileTitle>
+                <ProfileText>rlatjdwo0824@gmail.com</ProfileText>
 
-              <ProfileTitle style={{ marginTop: "64px" }}>
-                Techninal Stack
-              </ProfileTitle>
-              <ProfileText>
-                Clip studio, After effect, photoshop, Pro Tools
-              </ProfileText>
-            </TextBox>
-          </Container>
+                <ProfileTitle style={{ marginTop: "48px" }}>
+                  Techninal Stack
+                </ProfileTitle>
+
+                <TechBox>
+                  <TechImage src={ae} />
+                  <TechImage src={ps} />
+                  <TechImage src={pt} />
+                  <TechImage src={pc} style={{ width: "52px", margin: "0" }} />
+                  <TechImage src={cs} />
+                </TechBox>
+              </TextBox>
+              <MainContentBox>
+                <TextBox>
+                  <ProfileTitle>Demo Sample</ProfileTitle>
+                </TextBox>
+                <Mainiframe
+                  height="1000"
+                  src="https://www.youtube.com/embed/PJwANDmB7Hc"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen "
+                  allowfullscreen
+                ></Mainiframe>
+                {/* <MainVideo
+                src="https://deuffzfddmyq6.cloudfront.net/artworks/main.mp4"
+                poster="https://deuffzfddmyq6.cloudfront.net/artworks/lastcomp4.png"
+                // autoPlay
+                // loop
+                preload="auto"
+                controls={true}
+              /> */}
+              </MainContentBox>
+            </Container>
+          </Wrapper>
         </Wrapper>
       </Pc>
       <Mobile>
@@ -137,8 +180,7 @@ const Profile = () => {
                 src="https://www.youtube.com/embed/PJwANDmB7Hc"
                 title="YouTube video player"
                 frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
               ></Mainiframe>
               {/* <MainVideo
                 src="https://deuffzfddmyq6.cloudfront.net/artworks/main.mp4"
