@@ -153,7 +153,7 @@ const Home = ({ setIshome }) => {
                 // src={home_video}
                 // poster={home_poster}
                 // preload="none"
-
+                playsInline
                 autoPlay="autoplay"
                 muted="muted"
                 loop
