@@ -1,7 +1,7 @@
 import { Mobile, Pc } from "device";
 import React from "react";
 import { styled } from "styled-components";
-import YouTube from "react-youtube";
+
 import ae from "assets/icons/tech/ae.png";
 import pc from "assets/icons/tech/pc.png";
 import ps from "assets/icons/tech/ps.png";
@@ -70,14 +70,14 @@ const MainContentBox = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-const MainVideo = styled.video`
-  margin-top: 12px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: relative;
-  z-index: 0;
-`;
+// const MainVideo = styled.video`
+//   margin-top: 12px;
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+//   position: relative;
+//   z-index: 0;
+// `;
 const Mainiframe = styled.iframe`
   margin-top: 8px;
   width: 100%;

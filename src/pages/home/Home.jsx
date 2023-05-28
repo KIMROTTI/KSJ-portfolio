@@ -30,16 +30,16 @@ const BackgroundVideo = styled.video`
   /* opacity: 0.15; */
 `;
 
-const MobileBackgroundImage = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  object-fit: cover;
-  opacity: 0.7;
-`;
+// const MobileBackgroundImage = styled.img`
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 100%;
+//   width: 100%;
+//   z-index: -1;
+//   object-fit: cover;
+//   opacity: 0.7;
+// `;
 
 const MobileWrapper = styled.div`
   width: 100%;
