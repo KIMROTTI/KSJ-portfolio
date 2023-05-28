@@ -18,7 +18,9 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   @media screen and (max-width: 1024px) {
-    padding-top: 84px;
+    /* padding-top: 84px; */
+    padding-top: 0;
+    margin-top: 84px;
   }
 `;
 
