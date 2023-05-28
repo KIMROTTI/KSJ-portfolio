@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   @media screen and (max-width: 1024px) {
     /* padding-top: 84px; */
     padding-top: 0;
-    margin-top: 84px;
+    margin-top: 100px;
   }
 `;
 
@@ -33,6 +33,9 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 1024px) {
+    height: 100%;
+  }
 `;
 
 const TextBox = styled.div`
@@ -95,7 +98,7 @@ const Mainiframe = styled.iframe`
   height: 100%;
   max-width: 600px;
   max-height: 328px;
-  min-height: 80px;
+  min-height: 120px;
   /* width: 600px; */
   /* min-height: 100px; */
   /* object-fit: cover; */
